@@ -192,6 +192,10 @@ Checking the log is always recommended, since most of the time the error message
 
    ![View logs image](assets/images/view-logs-2.png)
 
+### **Failed to connect to the Patch server**
+
+- It is very likely that the prefix created by Proton was configured in **32-bit mode**, which can cause issues on some distributions that don’t install the **32-bit (lib32-*)** libraries by default, as is the case with Arch Linux. To fix this error, check if the **32-bit version** of `gnutls` is installed. If not, **you will need to install the `lib32-gnutls` package**. **GnuTLS** is used by the Ragnarök client to download patches via HTTPS.
+
 ---
 
 # 🙌 Credits

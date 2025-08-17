@@ -194,6 +194,10 @@ Siempre es recomendable revisar el registro, ya que la mayoría de las veces all
 
    ![View logs image](assets/images/view-logs-2.png)
 
+### **Fallo al intentar conectar con el servidor de parches**
+
+- Es muy probable que el prefijo creado por Proton haya sido configurado en **modo de 32 bits**, lo cual puede causar problemas en algunas distribuciones que no instalan las bibliotecas de **32 bits (lib32-*)** por defecto, como en el caso de Arch Linux. Para solucionar este error, verifica si la versión de **32 bits** de `gnutls` está instalada. En caso contrario, **será necesario instalar el paquete `lib32-gnutls`**. **GnuTLS** es utilizado por el cliente de Ragnarök para descargar los parches a través de HTTPS.
+
 ---
 
 # 🙌 Agradecimientos
